@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials Layout</title>
+    <!-- Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons (Arrow, Lightning bolt) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="testimonial-wrapper">
+        
+        <!-- LEFT: Static Information -->
+        <div class="testimonial-info">
+            <div>
+                <div class="testimonial-info__label">Testimonials</div>
+                <h1 class="testimonial-info__heading">What they say about Us?</h1>
+                <p class="testimonial-info__subtext">Here's what they shared about their experience working with our team.</p>
+                <a href="#" class="btn-primary">Get Started</a>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="testimonial-nav">
+                <button class="nav-arrow" onclick="scrollTestimonials('left')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="nav-arrow" onclick="scrollTestimonials('right')">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- RIGHT: Scrollable Testimonial Area -->
+        <div class="testimonial-scroller" id="scroller">
+
+            <!-- Item 1: Pink Theme (Exactly like image) -->
+            <div class="testimonial-group">
+                <!-- Image Column -->
+                <div class="visual-column">
+                    <div class="visual-column__image-wrapper">
+                        <!-- Using a placeholder image of a man in white shirt similar to reference -->
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop" alt="Portrait" class="visual-column__image">
+                    </div>
+                    <div class="visual-column__logo-card">
+                        <i class="fa-solid fa-bolt-lightning logo-icon"></i> Logoipsum
+                    </div>
+                </div>
+                
+                <!-- Quote Column -->
+                <div class="content-column theme-pink">
+                    <div class="quote-text">
+                        "They brought clarity to complex problems, breaking down barriers and delivering innovative solutions. I was truly impressed by how quickly their strategies turned into real, tangible outcomes, driving measurable growth and success for our business."
+                    </div>
+                    
+                    <div class="author-info">
+                        <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=200&auto=format&fit=crop" alt="Author" class="author-avatar">
+                        <div class="author-details">
+                            <span class="author-name">Isabella Tran</span>
+                            <span class="author-role">Director of Ops, NovaCore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Blue Theme -->
+            <div class="testimonial-group">
+                <div class="visual-column">
+                    <div class="visual-column__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" alt="Portrait" class="visual-column__image">
+                    </div>
+                    <div class="visual-column__logo-card">
+                        <i class="fa-solid fa-cube logo-icon"></i> BlockChain
+                    </div>
+                </div>
+                
+                <div class="content-column theme-blue">
+                    <div class="quote-text">
+                        "The level of dedication and expertise this team brought to the table was unmatched. They completely revamped our workflow, making us 50% more efficient within just two months. It was a game-changer for our daily operations."
+                    </div>
+                    
+                    <div class="author-info">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Author" class="author-avatar">
+                        <div class="author-details">
+                            <span class="author-name">Marcus Chen</span>
+                            <span class="author-role">CTO, TechFlow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Green Theme -->
+            <div class="testimonial-group">
+                <div class="visual-column">
+                    <div class="visual-column__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Portrait" class="visual-column__image">
+                    </div>
+                    <div class="visual-column__logo-card">
+                        <i class="fa-solid fa-leaf logo-icon"></i> EcoVentures
+                    </div>
+                </div>
+                
+                <div class="content-column theme-green">
+                    <div class="quote-text">
+                        "Finding a partner who truly understands sustainability and business growth is rare. They helped us scale our impact without compromising our core values. The results speak for themselves."
+                    </div>
+                    
+                    <div class="author-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Author" class="author-avatar">
+                        <div class="author-details">
+                            <span class="author-name">Sarah Jenkins</span>
+                            <span class="author-role">Founder, GreenLife</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Simple JS for the arrow buttons functionality
+        function scrollTestimonials(direction) {
+            const container = document.getElementById('scroller');
+            const scrollAmount = 600; // Approximate width of one card set
+            
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
