@@ -28,7 +28,6 @@
 - Semantic HTML structure (`<section>`, `<header>`, `<article>` ready)
 - ARIA roles can be extended for screen reader optimization
 
----
 
 ## Component Architecture
 
@@ -59,7 +58,6 @@ cadence/
 - `scrollTestimonials(direction)` function for programmatic scrolling
 - Uses `Element.scrollBy()` with smooth behavior
 
----
 
 ## Integration Guide
 
@@ -225,8 +223,6 @@ const imageObserver = new IntersectionObserver((entries) => {
 lazyImages.forEach(img => imageObserver.observe(img));
 ```
 
----
-
 ## Responsive Behavior Matrix
 
 | Breakpoint | Layout | Scrolling | Navigation |
@@ -235,7 +231,6 @@ lazyImages.forEach(img => imageObserver.observe(img));
 | 768px–1024px | Stacked (info above) | Horizontal (touch-friendly) | Arrow buttons + touch drag |
 | <768px | Single column | Vertical scroll | Arrow buttons (centered) |
 
----
 
 ## Performance Optimizations
 
@@ -247,7 +242,6 @@ lazyImages.forEach(img => imageObserver.observe(img));
    ```
 4. **Critical CSS**: Inline above-the-fold styles for faster FCP
 
----
 
 ## SEO & Accessibility Checklist
 
@@ -294,8 +288,6 @@ Create `package.json`:
 }
 ```
 
----
-
 ## Future Enhancements Roadmap
 
 1. **Vue/React Component Packages** – Publish to npm
@@ -305,7 +297,6 @@ Create `package.json`:
 5. **Dynamic Content** – Fetch testimonials from API
 6. **Dark Mode** – CSS custom properties for theming
 
----
 
 ## Best Practices Implemented
 
@@ -316,10 +307,9 @@ Create `package.json`:
 - **Performance-optimized** assets (WebP images, font subsets)
 - **Cross-browser compatibility** (Chrome, Firefox, Safari, Edge)
 
----
-
 ## License
 
 MIT License – free for personal and commercial use with attribution.
+
 
 
